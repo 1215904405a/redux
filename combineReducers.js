@@ -128,7 +128,7 @@ export default function combineReducers(reducers) {
   } catch (e) {
     shapeAssertionError = e
   }
-
+  //遍历更新state
   return function combination(state = {}, action) {  //返回state  可以手动迭代
     if (shapeAssertionError) {
       throw shapeAssertionError
